@@ -241,4 +241,7 @@ ul.CTAs a {
   #sidebarCollapse span {
     display: none;
   }
+  #sidebarCollapse {
+    position: fixed;
+  }
 }
