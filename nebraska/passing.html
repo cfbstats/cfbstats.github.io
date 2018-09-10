@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Husker Stats</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Bootstrap core CSS -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/custom.css">
+    <script defer="" src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
+    <script defer="" src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
+    <!-- Material Design Bootstrap -->
+    <link href="../css/mdb.min.css" rel="stylesheet">
+    <!-- Your custom styles (optional) -->
+    <link href="../css/style.css" rel="stylesheet">
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <!-- Sidebar  -->
+      <nav id="sidebar">
+        <div class="sidebar-header">
+          <h3>Husker Stats</h3>
+        </div>
+        <ul class="list-unstyled components">
+          <li class="active">
+            <a href="../index.html">
+              <i class="fas fa-home"></i>
+              Home
+            </a>
+            <a href="rushing.html">
+              Rushing
+            </a>
+            <a href="passing.html">
+              <i class="fas fa-map-marker"></i>
+              Passing
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      <div style="height: 100vh" class="container-fluid">
+        <div>
+          <button type="button" id="sidebarCollapse" class="btn btn-dark">
+            <i class="fas fa-align-left"></i>
+          </button>
+        </div>
+
+        <div>
+
+          <div class="flex-center flex-column">
+            <h1 class="animated fadeIn mb-4">Nebraska Cornhuskers</h1>
+
+            <h4 class="animated fadeIn mb-4">Passing</h4>
+            <p class="animated fadeIn text-muted">(Click a year to hide it)</p>
+
+            <canvas id="lineChart"></canvas>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SCRIPTS -->
+    <!-- JQuery -->
+    <script type="text/javascript" src="../js/jquery-3.3.1.min.js"></script>
+    <!-- Bootstrap tooltips -->
+    <script type="text/javascript" src="../js/popper.min.js"></script>
+    <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript" src="../js/bootstrap.min.js"></script>
+    <!-- MDB core JavaScript -->
+    <script type="text/javascript" src="../js/mdb.min.js"></script>
+    <script>
+      $(document).ready(function() {
+        $('#sidebarCollapse').on('click', function() {
+          $('#sidebar').toggleClass('active');
+        });
+      });
+    </script>
+    <script>
+      //line
+      var ctxL = document.getElementById('lineChart').getContext('2d');
+      var myLineChart = new Chart(ctxL, {
+        type: 'line',
+        data: {
+          labels: [
+            'Game 0',
+            '1',
+            '2',
+            '3',
+            '4',
+            '5',
+            '6',
+            '7',
+            '8',
+            '9',
+            '10',
+            '11',
+            '12'
+          ],
+          datasets: [{
+              label: '2017',
+              fillColor: 'rgba(255,253,208,0.2)',
+              strokeColor: 'rgba(255,36,0,1)',
+              pointColor: 'rgba(220,220,220,1)',
+              pointStrokeColor: '#fff',
+              pointHighlightFill: '#fff',
+              pointHighlightStroke: 'rgba(220,220,220,1)',
+              data: [
+                0,
+                225,
+                334,
+                419,
+                616,
+                781,
+                891,
+                935,
+                975,
+                1087,
+                1156,
+                1223,
+                1290
+              ]
+            },
+            {
+              label: '2018',
+              backgroundColor: 'rgba(255,36,0,0.2)',
+              borderColor: 'rgba(255,36,0,1)',
+              borderWidth: 2,
+              pointBackgroundColor: 'rgba(255,36,0,1)',
+              pointBorderColor: 'rgba(255,36,0,1)',
+              pointBorderWidth: 1,
+              pointRadius: 3,
+              pointHoverBackgroundColor: 'rgba(255,36,0,1)',
+              pointHoverBorderColor: 'rgba(151,187,205,1)',
+              data: [0, 329]
+            }
+          ]
+        },
+        options: {
+          responsive: true
+        }
+      });
+    </script>
+  </body>
+
+</html>
