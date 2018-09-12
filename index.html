@@ -20,93 +20,43 @@
   </head>
 
   <body>
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+      <a class="navbar-brand" href="#">CFBStats</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    </nav>
     <div class="wrapper">
-      <!-- Sidebar  -->
-      <nav id="sidebar">
-        <div class="sidebar-header">
-          <h3>Husker Stats</h3>
-        </div>
-        <ul class="list-unstyled components">
-          <li class="active">
-            <a href="index.html">
-              <i class="fas fa-home"></i>
-              Home
-            </a>
-            <a href="nebraska/totalrushingyards.html">
-              Total Rushing Yards
-            </a>
-            <a href="nebraska/totalpassingyards.html">
-              Total Passing Yards
-            </a>
-            <a href="nebraska/totaloffense.html">
-              Total Offense
-            </a>
-            <a href="nebraska/totalplaysrushing.html">
-              Total Plays Rushing
-            </a>
-            <a href="nebraska/totalplayspassing.html">
-              Total Plays Passing
-            </a>
-            <a href="nebraska/totalplaysoffense.html">
-              Total Plays Offense
-            </a>
-            <a href="nebraska/penalties.html">
-              Penalties
-            </a>
-            <a href="nebraska/penaltyyards.html">
-              Penalty Yards
-            </a>
-            <a href="nebraska/fumbleslost.html">
-              Fumbles Lost
-            </a>
-            <a href="nebraska/interceptionsthrown.html">
-              Interceptions Thrown
-            </a>
-            <a href="nebraska/totalturnoversoffense.html">
-              Total Turnovers Offense
-            </a>
-            <a href="nebraska/totalyardsallowed.html">
-              Total Yards Allowed
-            </a>
-            <a href="nebraska/rushingyardsallowed.html">
-              Rushing Yards Allowed
-            </a>
-            <a href="nebraska/passingyardsallowed.html">
-              Passing Yards Allowed
-            </a>
-            <a href="nebraska/fumblesrecovered.html">
-              Fumbles Recovered
-            </a>
-            <a href="nebraska/interceptions.html">
-              Interceptions
-            </a>
-            <a href="nebraska/totalturnoversdefense.html">
-              Total Turnovers Defense
-            </a>
-            <a href="nebraska/tacklesforloss.html">
-              Tackles For Loss
-            </a>
-            <a href="nebraska/sacks.html">
-              Sacks
-            </a>
-            <a href="nebraska/yardsperplay.html">
-              Yards Per Play
-            </a>
-          </li>
-        </ul>
-      </nav>
       <div class="container-fluid">
-        <div style="position:fixed">
-          <button type="button" id="sidebarCollapse" class="btn btn-dark">
-            <i class="fas fa-align-left"></i>
-          </button>
-        </div>
-
         <!-- Start your project here-->
         <div style="height: 100vh" class="container-fluid">
           <div>
             <div class="flex-center flex-column">
               <h1 class="animated fadeIn mb-4">GO BIG RED</h1>
+            </div>
+            <input class="form-control" id="myInput" type="text" placeholder="Search Teams..">
+            <div id="teams">
+              <div class="card" style="margin-top:10px">
+                <div class="card-header">
+                  BIG 10
+                </div>
+                <div class="card-body">
+                  <a href="nebraska/index.html" class="btn nebraska waves-effect waves-white">Nebraska Cornhuskers</a>
+                  <a href="iowa/index.html" class="btn iowa waves-effect waves-white corn-sucks">Iowa Hawkeyes</a>
+                  <a href="wisconsin/index.html" class="btn wisconsin waves-effect waves-white">Wisconsin Badgers</a>
+                  <a href="ohio-state/index.html" class="btn ohio-state waves-effect waves-white">Ohio State Buckeyes</a>
+                  <a href="michigan/index.html" class="btn michigan waves-effect waves-white">Michigan Wolverines</a>
+                  <a href="indiana/index.html" class="btn indiana waves-effect waves-white">Indiana Hoosiers</a>
+                  <a href="michigan-state/index.html" class="btn michigan-state waves-effect waves-white">Michigan State Spartans</a>
+                  <a href="illinois/index.html" class="btn illinois waves-effect waves-white">Illinois Fighting Illini</a>
+                  <a href="maryland/index.html" class="btn maryland waves-effect waves-white">Maryland Terrapins</a>
+                  <a href="purdue/index.html" class="btn purdue waves-effect waves-white">Purdue Boilermakers</a>
+                  <a href="rutgers/index.html" class="btn rutgers waves-effect waves-white">Rutgers Scarlet Knights</a>
+                  <a href="northwestern/index.html" class="btn northwestern waves-effect waves-white lesser-nu">Northwestern Wildcats</a>
+                  <a href="minnesota/index.html" class="btn minnesota waves-effect waves-white">Minnesota Golden Gophers</a>
+                  <a href="penn-state/index.html" class="btn penn-state waves-effect waves-white">Penn State Nittany Lions</a>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -124,8 +74,18 @@
     <script type="text/javascript" src="js/mdb.min.js"></script>
     <script>
       $(document).ready(function() {
-        $('#sidebarCollapse').on('click', function() {
-          $('#sidebar').toggleClass('active');
+        $('#myInput').on('keyup', function() {
+          var value = $(this)
+            .val()
+            .toLowerCase();
+          $('#teams *').filter(function() {
+            $(this).toggle(
+              $(this)
+              .text()
+              .toLowerCase()
+              .indexOf(value) > -1
+            );
+          });
         });
       });
     </script>

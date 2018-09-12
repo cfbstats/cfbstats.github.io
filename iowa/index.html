@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Husker Stats</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Bootstrap core CSS -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/custom.css">
+    <script defer="" src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
+    <script defer="" src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
+    <!-- Material Design Bootstrap -->
+    <link href="../css/mdb.min.css" rel="stylesheet">
+    <!-- Your custom styles (optional) -->
+    <link href="../css/style.css" rel="stylesheet">
+  </head>
+
+  <body>
+  <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+    <a class="navbar-brand" href="../index.html">CFBStats</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="index.html">Team Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../index.html">Teams</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="https://example.com" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Offense</a>
+          <div class="dropdown-menu" aria-labelledby="dropdown01">
+            <a class="dropdown-item" href="totalrushingyards.html">
+              Total Rushing Yards
+            </a>
+            <a class="dropdown-item" href="totalpassingyards.html">
+              Total Passing Yards
+            </a>
+            <a class="dropdown-item" href="totaloffense.html">
+              Total Offense
+            </a>
+            <a class="dropdown-item" href="totalplaysrushing.html">
+              Total Plays Rushing
+            </a>
+            <a class="dropdown-item" href="totalplayspassing.html">
+              Total Plays Passing
+            </a>
+            <a class="dropdown-item" href="totalplaysoffense.html">
+              Total Plays Offense
+            </a>
+            <a class="dropdown-item" href="fumbleslost.html">
+              Fumbles Lost
+            </a>
+            <a class="dropdown-item" href="interceptionsthrown.html">
+              Interceptions Thrown
+            </a>
+            <a class="dropdown-item" href="totalturnoversoffense.html">
+              Total Turnovers Offense
+            </a>
+          </div>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="https://example.com" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Defense</a>
+          <div class="dropdown-menu" aria-labelledby="dropdown02">
+            <a class="dropdown-item" href="totalyardsallowed.html">
+              Total Yards Allowed
+            </a>
+            <a class="dropdown-item" href="rushingyardsallowed.html">
+              Rushing Yards Allowed
+            </a>
+            <a class="dropdown-item" href="passingyardsallowed.html">
+              Passing Yards Allowed
+            </a>
+            <a class="dropdown-item" href="fumblesrecovered.html">
+              Fumbles Recovered
+            </a>
+            <a class="dropdown-item" href="interceptions.html">
+              Interceptions
+            </a>
+            <a class="dropdown-item" href="totalturnoversdefense.html">
+              Total Turnovers Defense
+            </a>
+            <a class="dropdown-item" href="tacklesforloss.html">
+              Tackles For Loss
+            </a>
+            <a class="dropdown-item" href="sacks.html">
+              Sacks
+            </a>
+          </div>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="https://example.com" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Per Play</a>
+          <div class="dropdown-menu" aria-labelledby="dropdown03">
+            <a class="dropdown-item" href="yardsperplay.html">
+              Yards Per Play
+            </a>
+            <a class="dropdown-item" href="offenseturnoversperplay.html">
+              Offense Turnovers Per Play
+            </a>
+          </div>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="https://example.com" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Team Stats</a>
+          <div class="dropdown-menu" aria-labelledby="dropdown03">
+            <a class="dropdown-item" href="penalties.html">
+              Penalties
+            </a>
+            <a class="dropdown-item" href="penaltyyards.html">
+              Penalty Yards
+            </a>
+            <a class="dropdown-item" href="turnovermargin.html">
+              Turnover Margin
+            </a>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="container-fluid">
+    <!-- Start your project here-->
+    <div class="flex-center flex-column">
+      <h1 class="animated fadeIn mb-4">Iowa Hawkeyes</h1>
+      <h4 class="animated fadeIn mb-4 text-muted text-center">Please PM me on reddit (here's a nifty link: <a href="https://www.reddit.com/message/compose/?to=PotentialSpecialist&subject=cfbstats">/u/PotentialSpecialist</a>) with feedback of which 6 stats you would like to see and I will adjust this page accordingly</h4>
+    </div>
+    <div class="row">
+      <div class="col-lg-6">
+        <div class="card" style="margin-top:10px">
+          <div class="card-header">
+            Total Offense
+          </div>
+          <div class="card-body">
+            <canvas id="totaloffense" ></canvas>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="card" style="margin-top:10px">
+          <div class="card-header">
+            Total Plays Offense
+          </div>
+          <div class="card-body">
+            <canvas id="totalplaysoffense" ></canvas>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-lg-6">
+      <div class="card" style="margin-top:10px">
+        <div class="card-header">
+          Total Turnovers Offense
+        </div>
+        <div class="card-body">
+          <canvas id="totalturnoversoffense" ></canvas>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-6">
+      <div class="card" style="margin-top:10px">
+        <div class="card-header">
+          Total Yards Allowed
+        </div>
+        <div class="card-body">
+          <canvas id="totalyardsallowed" ></canvas>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-lg-6">
+    <div class="card" style="margin-top:10px">
+      <div class="card-header">
+        Total Turnovers Defense
+      </div>
+      <div class="card-body">
+        <canvas id="totalturnoversdefense" ></canvas>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-6">
+    <div class="card" style="margin-top:10px">
+      <div class="card-header">
+        Yards Per Play
+      </div>
+      <div class="card-body">
+        <canvas id="yardsperplay" ></canvas>
+      </div>
+    </div>
+</div>
+</div>
+  </div>
+    <!-- SCRIPTS -->
+    <!-- JQuery -->
+    <script type="text/javascript" src="../js/jquery-3.3.1.min.js"></script>
+    <!-- Bootstrap tooltips -->
+    <script type="text/javascript" src="../js/popper.min.js"></script>
+    <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript" src="../js/bootstrap.min.js"></script>
+    <!-- MDB core JavaScript -->
+    <script type="text/javascript" src="../js/mdb.min.js"></script>
+<script>
+//line
+var ctxL = document.getElementById('totaloffense').getContext('2d');
+var myLineChart = new Chart(ctxL, {
+  type: 'line',
+  data: {
+    labels: [
+      'Game 0',
+      "1","2","3","4","5","6","7","8","9","10","11","12","13"
+    ],
+    datasets: [{
+        label: '2017',
+        data: [
+          0,
+          263,760,1195,1468,1694,2135,2447,2762,3249,3315,3573,4078,4278
+        ]
+      },
+      {
+        label: '2018',
+        backgroundColor: 'rgba(255, 205, 0,0.4)',
+        borderColor: 'rgba(255, 205, 0,1)',
+        borderWidth: 2,
+        pointBackgroundColor: 'rgba(255, 205, 0,1)',
+        pointBorderColor: 'rgba(255, 205, 0,1)',
+        pointBorderWidth: 1,
+        pointRadius: 3,
+        pointHoverBackgroundColor: 'rgba(255, 205, 0,1)',
+        pointHoverBorderColor: 'rgba(255, 205, 0,1)',
+        data: [0, 352,623]
+      }
+    ]
+  },
+  options: {
+    responsive: true
+  }
+});
+</script>
+
+<script>
+//line
+var ctxL = document.getElementById('totalplaysoffense').getContext('2d');
+var myLineChart = new Chart(ctxL, {
+  type: 'line',
+  data: {
+    labels: [
+      'Game 0',
+      "1","2","3","4","5","6","7","8","9","10","11","12","13"
+    ],
+    datasets: [{
+        label: '2017',
+        data: [
+          0,
+          56,138,224,269,326,398,464,524,594,644,715,782,836
+        ]
+      },
+      {
+        label: '2018',
+        backgroundColor: 'rgba(255, 205, 0,0.4)',
+        borderColor: 'rgba(255, 205, 0,1)',
+        borderWidth: 2,
+        pointBackgroundColor: 'rgba(255, 205, 0,1)',
+        pointBorderColor: 'rgba(255, 205, 0,1)',
+        pointBorderWidth: 1,
+        pointRadius: 3,
+        pointHoverBackgroundColor: 'rgba(255, 205, 0,1)',
+        pointHoverBorderColor: 'rgba(255, 205, 0,1)',
+        data: [0, 73,137]
+      }
+    ]
+  },
+  options: {
+    responsive: true
+  }
+});
+</script>
+
+<script>
+//line
+var ctxL = document.getElementById('totalturnoversoffense').getContext('2d');
+var myLineChart = new Chart(ctxL, {
+  type: 'line',
+  data: {
+    labels: [
+      'Game 0',
+      "1","2","3","4","5","6","7","8","9","10","11","12","13"
+    ],
+    datasets: [{
+        label: '2017',
+        data: [
+          0,
+          4,4,6,7,9,11,12,14,14,17,19,19,19
+        ]
+      },
+      {
+        label: '2018',
+        backgroundColor: 'rgba(255, 205, 0,0.4)',
+        borderColor: 'rgba(255, 205, 0,1)',
+        borderWidth: 2,
+        pointBackgroundColor: 'rgba(255, 205, 0,1)',
+        pointBorderColor: 'rgba(255, 205, 0,1)',
+        pointBorderWidth: 1,
+        pointRadius: 3,
+        pointHoverBackgroundColor: 'rgba(255, 205, 0,1)',
+        pointHoverBorderColor: 'rgba(255, 205, 0,1)',
+        data: [0, 1,1]
+      }
+    ]
+  },
+  options: {
+    responsive: true
+  }
+});
+</script>
+
+<script>
+//line
+var ctxL = document.getElementById('totalyardsallowed').getContext('2d');
+var myLineChart = new Chart(ctxL, {
+  type: 'line',
+  data: {
+    labels: [
+      'Game 0',
+      "1","2","3","4","5","6","7","8","9","10","11","12","13"
+    ],
+    datasets: [{
+        label: '2017',
+        data: [
+          0,
+          233,700,1005,1584,1884,2330,2669,2950,3321,3703,3997,4264,4647
+        ]
+      },
+      {
+        label: '2018',
+        backgroundColor: 'rgba(255, 205, 0,0.4)',
+        borderColor: 'rgba(255, 205, 0,1)',
+        borderWidth: 2,
+        pointBackgroundColor: 'rgba(255, 205, 0,1)',
+        pointBorderColor: 'rgba(255, 205, 0,1)',
+        pointBorderWidth: 1,
+        pointRadius: 3,
+        pointHoverBackgroundColor: 'rgba(255, 205, 0,1)',
+        pointHoverBorderColor: 'rgba(255, 205, 0,1)',
+        data: [0, 211,399]
+      }
+    ]
+  },
+  options: {
+    responsive: true
+  }
+});
+</script>
+
+<script>
+//line
+var ctxL = document.getElementById('totalturnoversdefense').getContext('2d');
+var myLineChart = new Chart(ctxL, {
+  type: 'line',
+  data: {
+    labels: [
+      'Game 0',
+      "1","2","3","4","5","6","7","8","9","10","11","12","13"
+    ],
+    datasets: [{
+        label: '2017',
+        data: [
+          0,
+          2,3,5,7,7,11,11,12,16,20,20,23,26
+        ]
+      },
+      {
+        label: '2018',
+        backgroundColor: 'rgba(255, 205, 0,0.4)',
+        borderColor: 'rgba(255, 205, 0,1)',
+        borderWidth: 2,
+        pointBackgroundColor: 'rgba(255, 205, 0,1)',
+        pointBorderColor: 'rgba(255, 205, 0,1)',
+        pointBorderWidth: 1,
+        pointRadius: 3,
+        pointHoverBackgroundColor: 'rgba(255, 205, 0,1)',
+        pointHoverBorderColor: 'rgba(255, 205, 0,1)',
+        data: [0, 2,3]
+      }
+    ]
+  },
+  options: {
+    responsive: true
+  }
+});
+</script>
+
+<script>
+//line
+var ctxB = document.getElementById("offenseturnoversperplay").getContext('2d');
+var myBarChart = new Chart(ctxB, {
+    type: 'bar',
+    data: {
+        labels: ["2017", "2018"],
+        datasets: [{
+            label: 'Offense Turnovers Per Play',
+            data: [0.022727272727272728,0.0072992700729927005],
+            backgroundColor: [
+                'rgba(150,150,150,0.2)',
+                'rgba(255, 205, 0,0.4)',
+            ],
+            borderColor: [
+                'rgba(150,150,150,1)',
+                'rgba(255, 205, 0,1)',
+            ],
+            borderWidth: 1
+        }]
+    },
+    options: {
+        scales: {
+            yAxes: [{
+                ticks: {
+                    beginAtZero:true
+                }
+            }]
+        }
+    }
+});
+</script>
+
+  </body>
+
+</html>
