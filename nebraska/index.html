@@ -152,29 +152,28 @@
           </div>
         </div>
       </div>
-    </div>
-    <div class="row">
-      <div class="col-lg-6">
-        <div class="card" style="margin-top:10px">
-          <div class="card-header">
-            Total Turnovers Offense
+      <div class="row">
+        <div class="col-lg-6">
+          <div class="card" style="margin-top:10px">
+            <div class="card-header">
+              Total Turnovers Offense
+            </div>
+            <div class="card-body">
+              <canvas id="totalturnoversoffense" ></canvas>
+            </div>
           </div>
-          <div class="card-body">
-            <canvas id="totalturnoversoffense" ></canvas>
+        </div>
+        <div class="col-lg-6">
+          <div class="card" style="margin-top:10px">
+            <div class="card-header">
+              Total Yards Allowed
+            </div>
+            <div class="card-body">
+              <canvas id="totalyardsallowed" ></canvas>
+            </div>
           </div>
         </div>
       </div>
-      <div class="col-lg-6">
-        <div class="card" style="margin-top:10px">
-          <div class="card-header">
-            Total Yards Allowed
-          </div>
-          <div class="card-body">
-            <canvas id="totalyardsallowed" ></canvas>
-          </div>
-        </div>
-      </div>
-    </div>
     </div>
     <div class="row">
       <div class="col-lg-6">
@@ -209,259 +208,298 @@
     <!-- MDB core JavaScript -->
     <script type="text/javascript" src="../js/mdb.min.js"></script>
     <script>
-      //line
-      var ctxL = document.getElementById('totaloffense').getContext('2d');
-      var myLineChart = new Chart(ctxL, {
-        type: 'line',
-        data: {
-          labels: [
-            'Game 0',
-            "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12"
-          ],
-          datasets: [{
-              label: '2017',
-              data: [
-                0,
-                463, 824, 1208, 1514, 1925, 2306, 2699, 3170, 3507, 3887, 4353, 4620
-              ]
-            },
-            {
-              label: '2018',
-              backgroundColor: 'rgba(227, 25, 55,0.2)',
-              borderColor: 'rgba(227, 25, 55,1)',
-              borderWidth: 2,
-              pointBackgroundColor: 'rgba(227, 25, 55,1)',
-              pointBorderColor: 'rgba(227, 25, 55,1)',
-              pointBorderWidth: 1,
-              pointRadius: 3,
-              pointHoverBackgroundColor: 'rgba(227, 25, 55,1)',
-              pointHoverBorderColor: 'rgba(227, 25, 55,1)',
-              data: [0, 565]
-            }
-          ]
-        },
-        options: {
-          responsive: true
-        }
-      });
-    </script>
+    //line
+var ctxL = document.getElementById('totaloffense').getContext('2d');
+var myLineChart = new Chart(ctxL, {
+  type: 'line',
+  data: {
+    labels: [
+      'Game 0',
+      '1',
+      '2',
+      '3',
+      '4',
+      '5',
+      '6',
+      '7',
+      '8',
+      '9',
+      '10',
+      '11',
+      '12'
+    ],
+    datasets: [
+      {
+        label: '2017',
+        data: [
+          0,
+          463,
+          824,
+          1208,
+          1514,
+          1925,
+          2306,
+          2699,
+          3170,
+          3507,
+          3887,
+          4353,
+          4620
+        ]
+      },
+      {
+        label: '2018',
+        backgroundColor: 'rgba(227, 25, 55,0.2)',
+        borderColor: 'rgba(227, 25, 55,1)',
+        borderWidth: 2,
+        pointBackgroundColor: 'rgba(227, 25, 55,1)',
+        pointBorderColor: 'rgba(227, 25, 55,1)',
+        pointBorderWidth: 1,
+        pointRadius: 3,
+        pointHoverBackgroundColor: 'rgba(227, 25, 55,1)',
+        pointHoverBorderColor: 'rgba(227, 25, 55,1)',
+        data: [0, 565]
+      }
+    ]
+  },
+  options: {
+    responsive: true
+  }
+});
+</script>
 
     <script>
-      //line
-      var ctxL = document.getElementById('totalplaysoffense').getContext('2d');
-      var myLineChart = new Chart(ctxL, {
-        type: 'line',
-        data: {
-          labels: [
-            'Game 0',
-            "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12"
-          ],
-          datasets: [{
-              label: '2017',
-              data: [
-                0,
-                70, 140, 223, 296, 358, 419, 482, 559, 628, 697, 764, 827
-              ]
-            },
-            {
-              label: '2018',
-              backgroundColor: 'rgba(227, 25, 55,0.2)',
-              borderColor: 'rgba(227, 25, 55,1)',
-              borderWidth: 2,
-              pointBackgroundColor: 'rgba(227, 25, 55,1)',
-              pointBorderColor: 'rgba(227, 25, 55,1)',
-              pointBorderWidth: 1,
-              pointRadius: 3,
-              pointHoverBackgroundColor: 'rgba(227, 25, 55,1)',
-              pointHoverBorderColor: 'rgba(227, 25, 55,1)',
-              data: [0, 83]
-            }
-          ]
-        },
-        options: {
-          responsive: true
-        }
-      });
-    </script>
+    //line
+var ctxL = document.getElementById('totalplaysoffense').getContext('2d');
+var myLineChart = new Chart(ctxL, {
+  type: 'line',
+  data: {
+    labels: [
+      'Game 0',
+      '1',
+      '2',
+      '3',
+      '4',
+      '5',
+      '6',
+      '7',
+      '8',
+      '9',
+      '10',
+      '11',
+      '12'
+    ],
+    datasets: [
+      {
+        label: '2017',
+        data: [0, 70, 140, 223, 296, 358, 419, 482, 559, 628, 697, 764, 827]
+      },
+      {
+        label: '2018',
+        backgroundColor: 'rgba(227, 25, 55,0.2)',
+        borderColor: 'rgba(227, 25, 55,1)',
+        borderWidth: 2,
+        pointBackgroundColor: 'rgba(227, 25, 55,1)',
+        pointBorderColor: 'rgba(227, 25, 55,1)',
+        pointBorderWidth: 1,
+        pointRadius: 3,
+        pointHoverBackgroundColor: 'rgba(227, 25, 55,1)',
+        pointHoverBorderColor: 'rgba(227, 25, 55,1)',
+        data: [0, 83]
+      }
+    ]
+  },
+  options: {
+    responsive: true
+  }
+});
+</script>
 
     <script>
-      //line
-      var ctxL = document.getElementById('totalturnoversoffense').getContext('2d');
-      var myLineChart = new Chart(ctxL, {
-        type: 'line',
-        data: {
-          labels: [
-            'Game 0',
-            '1',
-            '2',
-            '3',
-            '4',
-            '5',
-            '6',
-            '7',
-            '8',
-            '9',
-            '10',
-            '11',
-            '12'
-          ],
-          datasets: [{
-              label: '2017',
-              data: [0, 0, 4, 7, 9, 10, 12, 13, 13, 16, 16, 16, 19]
-            },
-            {
-              label: '2018',
-              backgroundColor: 'rgba(227, 25, 55,0.2)',
-              borderColor: 'rgba(227, 25, 55,1)',
-              borderWidth: 2,
-              pointBackgroundColor: 'rgba(227, 25, 55,1)',
-              pointBorderColor: 'rgba(227, 25, 55,1)',
-              pointBorderWidth: 1,
-              pointRadius: 3,
-              pointHoverBackgroundColor: 'rgba(227, 25, 55,1)',
-              pointHoverBorderColor: 'rgba(227, 25, 55,1)',
-              data: [0, 3]
-            }
-          ]
-        },
-        options: {
-          responsive: true
-        }
-      });
-    </script>
+    //line
+var ctxL = document.getElementById('totalturnoversoffense').getContext('2d');
+var myLineChart = new Chart(ctxL, {
+  type: 'line',
+  data: {
+    labels: [
+      'Game 0',
+      '1',
+      '2',
+      '3',
+      '4',
+      '5',
+      '6',
+      '7',
+      '8',
+      '9',
+      '10',
+      '11',
+      '12'
+    ],
+    datasets: [
+      {
+        label: '2017',
+        data: [0, 0, 4, 7, 9, 10, 12, 13, 13, 16, 16, 16, 19]
+      },
+      {
+        label: '2018',
+        backgroundColor: 'rgba(227, 25, 55,0.2)',
+        borderColor: 'rgba(227, 25, 55,1)',
+        borderWidth: 2,
+        pointBackgroundColor: 'rgba(227, 25, 55,1)',
+        pointBorderColor: 'rgba(227, 25, 55,1)',
+        pointBorderWidth: 1,
+        pointRadius: 3,
+        pointHoverBackgroundColor: 'rgba(227, 25, 55,1)',
+        pointHoverBorderColor: 'rgba(227, 25, 55,1)',
+        data: [0, 3]
+      }
+    ]
+  },
+  options: {
+    responsive: true
+  }
+});
+</script>
 
     <script>
-      //line
-      var ctxL = document.getElementById('totalyardsallowed').getContext('2d');
-      var myLineChart = new Chart(ctxL, {
-        type: 'line',
-        data: {
-          labels: [
-            'Game 0',
-            '1',
-            '2',
-            '3',
-            '4',
-            '5',
-            '6',
-            '7',
-            '8',
-            '9',
-            '10',
-            '11',
-            '12'
-          ],
-          datasets: [{
-              label: '2017',
-              data: [
-                0,
-                497,
-                1063,
-                1299,
-                1493,
-                1692,
-                2158,
-                2791,
-                3154,
-                3629,
-                4143,
-                4752,
-                5257
-              ]
-            },
-            {
-              label: '2018',
-              backgroundColor: 'rgba(227, 25, 55,0.2)',
-              borderColor: 'rgba(227, 25, 55,1)',
-              borderWidth: 2,
-              pointBackgroundColor: 'rgba(227, 25, 55,1)',
-              pointBorderColor: 'rgba(227, 25, 55,1)',
-              pointBorderWidth: 1,
-              pointRadius: 3,
-              pointHoverBackgroundColor: 'rgba(227, 25, 55,1)',
-              pointHoverBorderColor: 'rgba(227, 25, 55,1)',
-              data: [0, 395]
-            }
-          ]
-        },
-        options: {
-          responsive: true
-        }
-      });
-    </script>
+    //line
+var ctxL = document.getElementById('totalyardsallowed').getContext('2d');
+var myLineChart = new Chart(ctxL, {
+  type: 'line',
+  data: {
+    labels: [
+      'Game 0',
+      '1',
+      '2',
+      '3',
+      '4',
+      '5',
+      '6',
+      '7',
+      '8',
+      '9',
+      '10',
+      '11',
+      '12'
+    ],
+    datasets: [
+      {
+        label: '2017',
+        data: [
+          0,
+          497,
+          1063,
+          1299,
+          1493,
+          1692,
+          2158,
+          2791,
+          3154,
+          3629,
+          4143,
+          4752,
+          5257
+        ]
+      },
+      {
+        label: '2018',
+        backgroundColor: 'rgba(227, 25, 55,0.2)',
+        borderColor: 'rgba(227, 25, 55,1)',
+        borderWidth: 2,
+        pointBackgroundColor: 'rgba(227, 25, 55,1)',
+        pointBorderColor: 'rgba(227, 25, 55,1)',
+        pointBorderWidth: 1,
+        pointRadius: 3,
+        pointHoverBackgroundColor: 'rgba(227, 25, 55,1)',
+        pointHoverBorderColor: 'rgba(227, 25, 55,1)',
+        data: [0, 395]
+      }
+    ]
+  },
+  options: {
+    responsive: true
+  }
+});
+</script>
 
     <script>
-      //line
-      var ctxL = document.getElementById('totalturnoversdefense').getContext('2d');
-      var myLineChart = new Chart(ctxL, {
-        type: 'line',
-        data: {
-          labels: [
-            'Game 0',
-            '1',
-            '2',
-            '3',
-            '4',
-            '5',
-            '6',
-            '7',
-            '8',
-            '9',
-            '10',
-            '11',
-            '12'
-          ],
-          datasets: [{
-              label: '2017',
-              data: [0, 2, 4, 5, 7, 8, 9, 9, 9, 11, 11, 12, 12]
-            },
-            {
-              label: '2018',
-              backgroundColor: 'rgba(227, 25, 55,0.2)',
-              borderColor: 'rgba(227, 25, 55,1)',
-              borderWidth: 2,
-              pointBackgroundColor: 'rgba(227, 25, 55,1)',
-              pointBorderColor: 'rgba(227, 25, 55,1)',
-              pointBorderWidth: 1,
-              pointRadius: 3,
-              pointHoverBackgroundColor: 'rgba(227, 25, 55,1)',
-              pointHoverBorderColor: 'rgba(227, 25, 55,1)',
-              data: [0, 0]
-            }
-          ]
-        },
-        options: {
-          responsive: true
-        }
-      });
-    </script>
+    //line
+var ctxL = document.getElementById('totalturnoversdefense').getContext('2d');
+var myLineChart = new Chart(ctxL, {
+  type: 'line',
+  data: {
+    labels: [
+      'Game 0',
+      '1',
+      '2',
+      '3',
+      '4',
+      '5',
+      '6',
+      '7',
+      '8',
+      '9',
+      '10',
+      '11',
+      '12'
+    ],
+    datasets: [
+      {
+        label: '2017',
+        data: [0, 2, 4, 5, 7, 8, 9, 9, 9, 11, 11, 12, 12]
+      },
+      {
+        label: '2018',
+        backgroundColor: 'rgba(227, 25, 55,0.2)',
+        borderColor: 'rgba(227, 25, 55,1)',
+        borderWidth: 2,
+        pointBackgroundColor: 'rgba(227, 25, 55,1)',
+        pointBorderColor: 'rgba(227, 25, 55,1)',
+        pointBorderWidth: 1,
+        pointRadius: 3,
+        pointHoverBackgroundColor: 'rgba(227, 25, 55,1)',
+        pointHoverBorderColor: 'rgba(227, 25, 55,1)',
+        data: [0, 0]
+      }
+    ]
+  },
+  options: {
+    responsive: true
+  }
+});
+</script>
 
     <script>
-      //line
-      var ctxB = document.getElementById('yardsperplay').getContext('2d');
-      var myBarChart = new Chart(ctxB, {
-        type: 'bar',
-        data: {
-          labels: ['2017', '2018'],
-          datasets: [{
-            label: 'Yards Per Play',
-            data: [5.58645707376058, 6.807228915662651],
-            backgroundColor: ['rgba(150,150,150,0.2)', 'rgba(227, 25, 55,0.2)'],
-            borderColor: ['rgba(150,150,150,1)', 'rgba(227, 25, 55,1)'],
-            borderWidth: 1
-          }]
-        },
-        options: {
-          scales: {
-            yAxes: [{
-              ticks: {
-                beginAtZero: true
-              }
-            }]
+    //line
+var ctxB = document.getElementById('yardsperplay').getContext('2d');
+var myBarChart = new Chart(ctxB, {
+  type: 'bar',
+  data: {
+    labels: ['2017', '2018'],
+    datasets: [
+      {
+        label: 'Yards Per Play',
+        data: [5.58645707376058, 6.807228915662651],
+        backgroundColor: ['rgba(150,150,150,0.2)', 'rgba(227, 25, 55,0.2)'],
+        borderColor: ['rgba(150,150,150,1)', 'rgba(227, 25, 55,1)'],
+        borderWidth: 1
+      }
+    ]
+  },
+  options: {
+    scales: {
+      yAxes: [
+        {
+          ticks: {
+            beginAtZero: true
           }
         }
-      });
-    </script>
+      ]
+    }
+  }
+});
+</script>
 
   </body>
 
