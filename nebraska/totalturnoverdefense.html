@@ -21,151 +21,151 @@
 
   <body>
     <div class="wrapper">
-<!-- Sidebar  -->
-<nav id="sidebar">
-  <div class="sidebar-header">
-    <h3>Husker Stats</h3>
-  </div>
-  <ul class="list-unstyled components">
-    <li class="active">
-      <a href="../index.html">
+      <!-- Sidebar  -->
+      <nav id="sidebar">
+        <div class="sidebar-header">
+          <h3>Husker Stats</h3>
+        </div>
+        <ul class="list-unstyled components">
+          <li class="active">
+            <a href="../index.html">
         <i class="fas fa-home"></i>
         Home
       </a>
-      <a href="totalrushingyards.html">
+            <a href="totalrushingyards.html">
         Total Rushing Yards
       </a>
-      <a href="totalpassingyards.html">
+            <a href="totalpassingyards.html">
         Total Passing Yards
       </a>
-      <a href="totaloffense.html">
+            <a href="totaloffense.html">
         Total Offense
       </a>
-      <a href="totalplaysrushing.html">
+            <a href="totalplaysrushing.html">
         Total Plays Rushing
       </a>
-      <a href="totalplayspassing.html">
+            <a href="totalplayspassing.html">
         Total Plays Passing
       </a>
-      <a href="totalplaysoffense.html">
+            <a href="totalplaysoffense.html">
         Total Plays Offense
       </a>
-      <a href="penalties.html">
+            <a href="penalties.html">
         Penalties
       </a>
-      <a href="penaltyyards.html">
+            <a href="penaltyyards.html">
         Penalty Yards
       </a>
-      <a href="fumbleslost.html">
+            <a href="fumbleslost.html">
         Fumbles Lost
       </a>
-      <a href="interceptionsthrown.html">
+            <a href="interceptionsthrown.html">
         Interceptions Thrown
       </a>
-      <a href="totalturnoversoffense.html">
+            <a href="totalturnoversoffense.html">
         Total Turnovers Offense
       </a>
-      <a href="totalyardsallowed.html">
+            <a href="totalyardsallowed.html">
         Total Yards Allowed
       </a>
-      <a href="rushingyardsallowed.html">
+            <a href="rushingyardsallowed.html">
         Rushing Yards Allowed
       </a>
-      <a href="passingyardsallowed.html">
+            <a href="passingyardsallowed.html">
         Passing Yards Allowed
       </a>
-      <a href="fumblesrecovered.html">
+            <a href="fumblesrecovered.html">
         Fumbles Recovered
       </a>
-      <a href="interceptions.html">
+            <a href="interceptions.html">
         Interceptions
       </a>
-      <a href="totalturnoversdefense.html">
+            <a href="totalturnoversdefense.html">
         Total Turnovers Defense
       </a>
-    </li>
-  </ul>
-</nav>
-<div style="height: 100vh" class="container-fluid">
-  <div style="position: fixed">
-    <button type="button" id="sidebarCollapse" class="btn btn-dark">
+          </li>
+        </ul>
+      </nav>
+      <div style="height: 100vh" class="container-fluid">
+        <div style="position: fixed">
+          <button type="button" id="sidebarCollapse" class="btn btn-dark">
       <i class="fas fa-align-left"></i>
     </button>
-  </div>
+        </div>
 
-  <div>
+        <div>
 
-    <div class="flex-center flex-column">
-      <h1 class="animated fadeIn mb-4">Nebraska Cornhuskers</h1>
+          <div class="flex-center flex-column">
+            <h1 class="animated fadeIn mb-4">Nebraska Cornhuskers</h1>
 
-      <h4 class="animated fadeIn mb-4">Total Turnovers Defense</h4>
-      <p class="animated fadeIn text-muted">(Click a year to hide it)</p>
+            <h4 class="animated fadeIn mb-4">Total Turnovers Defense</h4>
+            <p class="animated fadeIn text-muted">(Click a year to hide it)</p>
 
-      <canvas id="lineChart"></canvas>
+            <canvas id="lineChart"></canvas>
+          </div>
+        </div>
+      </div>
     </div>
-  </div>
-</div>
-</div>
 
-<!-- SCRIPTS -->
-<!-- JQuery -->
-<script type="text/javascript" src="../js/jquery-3.3.1.min.js"></script>
-<!-- Bootstrap tooltips -->
-<script type="text/javascript" src="../js/popper.min.js"></script>
-<!-- Bootstrap core JavaScript -->
-<script type="text/javascript" src="../js/bootstrap.min.js"></script>
-<!-- MDB core JavaScript -->
-<script type="text/javascript" src="../js/mdb.min.js"></script>
-<script>
-$(document).ready(function() {
-  $('#sidebarCollapse').on('click', function() {
-    $('#sidebar').toggleClass('active');
-  });
-});
-</script>
-<script>
-//line
-var ctxL = document.getElementById('lineChart').getContext('2d');
-var myLineChart = new Chart(ctxL, {
-  type: 'line',
-  data: {
-    labels: [
-      'Game 0',
-      "1","2","3","4","5","6","7","8","9","10","11","12"
-    ],
-    datasets: [{
-        label: '2017',
-        fillColor: 'rgba(255,253,208,0.2)',
-        strokeColor: 'rgba(255,36,0,1)',
-        pointColor: 'rgba(220,220,220,1)',
-        pointStrokeColor: '#fff',
-        pointHighlightFill: '#fff',
-        pointHighlightStroke: 'rgba(220,220,220,1)',
-        data: [
-          0,
-          0,4,7,9,10,12,13,13,16,16,16,19
-        ]
-      },
-      {
-        label: '2018',
-        backgroundColor: 'rgba(255,36,0,0.2)',
-        borderColor: 'rgba(255,36,0,1)',
-        borderWidth: 2,
-        pointBackgroundColor: 'rgba(255,36,0,1)',
-        pointBorderColor: 'rgba(255,36,0,1)',
-        pointBorderWidth: 1,
-        pointRadius: 3,
-        pointHoverBackgroundColor: 'rgba(255,36,0,1)',
-        pointHoverBorderColor: 'rgba(151,187,205,1)',
-        data: [0, 3]
-      }
-    ]
-  },
-  options: {
-    responsive: true
-  }
-});
-</script>
-</body>
+    <!-- SCRIPTS -->
+    <!-- JQuery -->
+    <script type="text/javascript" src="../js/jquery-3.3.1.min.js"></script>
+    <!-- Bootstrap tooltips -->
+    <script type="text/javascript" src="../js/popper.min.js"></script>
+    <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript" src="../js/bootstrap.min.js"></script>
+    <!-- MDB core JavaScript -->
+    <script type="text/javascript" src="../js/mdb.min.js"></script>
+    <script>
+      $(document).ready(function() {
+        $('#sidebarCollapse').on('click', function() {
+          $('#sidebar').toggleClass('active');
+        });
+      });
+    </script>
+    <script>
+      //line
+      var ctxL = document.getElementById('lineChart').getContext('2d');
+      var myLineChart = new Chart(ctxL, {
+        type: 'line',
+        data: {
+          labels: [
+            'Game 0',
+            "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12"
+          ],
+          datasets: [{
+              label: '2017',
+              fillColor: 'rgba(255,253,208,0.2)',
+              strokeColor: 'rgba(255,36,0,1)',
+              pointColor: 'rgba(220,220,220,1)',
+              pointStrokeColor: '#fff',
+              pointHighlightFill: '#fff',
+              pointHighlightStroke: 'rgba(220,220,220,1)',
+              data: [
+                0,
+                0, 4, 7, 9, 10, 12, 13, 13, 16, 16, 16, 19
+              ]
+            },
+            {
+              label: '2018',
+              backgroundColor: 'rgba(255,36,0,0.2)',
+              borderColor: 'rgba(255,36,0,1)',
+              borderWidth: 2,
+              pointBackgroundColor: 'rgba(255,36,0,1)',
+              pointBorderColor: 'rgba(255,36,0,1)',
+              pointBorderWidth: 1,
+              pointRadius: 3,
+              pointHoverBackgroundColor: 'rgba(255,36,0,1)',
+              pointHoverBorderColor: 'rgba(151,187,205,1)',
+              data: [0, 3, 4]
+            }
+          ]
+        },
+        options: {
+          responsive: true
+        }
+      });
+    </script>
+  </body>
 
 </html>
