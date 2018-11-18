@@ -133,6 +133,37 @@
                   <a href="vanderbilt/index.html" class="btn vanderbilt waves-effect waves-white">Vanderbilt Commodores</a>
                 </div>
               </div>
+              <div class="card" style="margin-top:10px">
+                <div class="card-header">
+                  Independents
+                </div>
+                <div class="card-body">
+                  <a href="notre-dame/index.html" class="btn notre-dame waves-effect waves-white">Notre Dame Fighting Irish</a>
+                  <a href="army/index.html" class="btn army waves-effect waves-white">Army Black Knights</a>
+                  <a href="brigham-young/index.html" class="btn brigham-young waves-effect waves-white">BYU Cougars</a>
+                  <a href="massachusetts/index.html" class="btn massachusetts waves-effect waves-white">UMass Minutemen</a>
+                  <a href="new-mexico-state/index.html" class="btn new-mexico-state waves-effect waves-white">New Mexico State Aggies</a>
+                </div>
+              </div>
+              <div class="card" style="margin-top:10px">
+                <div class="card-header">
+                  American Athletic
+                </div>
+                <div class="card-body">
+                  <a href="cincinnati/index.html" class="btn cincinnati waves-effect waves-white">Cincinnati Bearcats</a>
+                  <a href="east-carolina/index.html" class="btn east-carolina waves-effect waves-white">East Carolina Pirates</a>
+                  <a href="houston/index.html" class="btn houston waves-effect waves-white">Houston Cougars</a>
+                  <a href="memphis/index.html" class="btn memphis waves-effect waves-white">Memphis Tigers</a>
+                  <a href="navy/index.html" class="btn navy waves-effect waves-white">Navy Midshipmen</a>
+                  <a href="southern-methodist/index.html" class="btn southern-methodist waves-effect waves-white">SMU Mustangs</a>
+                  <a href="south-florida/index.html" class="btn south-florida waves-effect waves-white">South Florida Bulls</a>
+                  <a href="temple/index.html" class="btn temple waves-effect waves-white">Temple Owls</a>
+                  <a href="tulane/index.html" class="btn tulane waves-effect waves-white">Tulane Green Wave</a>
+                  <a href="tulsa/index.html" class="btn tulsa waves-effect waves-white">Tulsa Golden Hurricane</a>
+                  <a href="central-florida/index.html" class="btn central-florida waves-effect waves-white">UCF Knights</a>
+                  <a href="connecticut/index.html" class="btn connecticut waves-effect waves-white">UConn Huskies</a>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -149,22 +180,22 @@
     <!-- MDB core JavaScript -->
     <script type="text/javascript" src="js/mdb.min.js"></script>
     <script>
-    $(document).ready(function() {
-  $('#myInput').on('keyup', function() {
-    var value = $(this)
-      .val()
-      .toLowerCase();
-    $('#teams *').filter(function() {
-      $(this).toggle(
-        $(this)
-          .text()
-          .toLowerCase()
-          .indexOf(value) > -1
-      );
-    });
-  });
-});
-</script>
+      $(document).ready(function() {
+        $('#myInput').on('keyup', function() {
+          var value = $(this)
+            .val()
+            .toLowerCase();
+          $('#teams *').filter(function() {
+            $(this).toggle(
+              $(this)
+              .text()
+              .toLowerCase()
+              .indexOf(value) > -1
+            );
+          });
+        });
+      });
+    </script>
   </body>
 
 </html>
